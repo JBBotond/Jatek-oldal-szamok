@@ -1,17 +1,60 @@
 html {
+    margin: 0;
+    border: none;
     font-family: sans-serif;
 }
 
 body {
-    width: 50%;
-    max-width: 800px;
-    min-width: 480px;
-    margin: 0 auto;
+    margin: 0;
 }
-.form input[type="number"] {
-    width: 200px;
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.lastResult{
+
+.lastResult {
     color: white;
     padding: 3px;
+}
+body header .fejlec  {
+    display: flex;
+    background: rgb(85, 227, 85);
+    height: 120px;
+    width: 100%vw;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.fejlec p {
+    font-size: xx-large;
+}
+.jatekAblak {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 60vw;
+}
+.jatekAblak h1 {
+    font-weight: 900;
+    font-size: xx-large;
+    margin: 10px 10px 50px 10px;
+    font-style: italic;
+    background: -webkit-linear-gradient(#2ee725, #78d173);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px dotted;
+    border-radius: 10px;
+    padding: 10px;
+}
+section {
+    display: flex;
+    justify-content: space-between;
+}
+section .reklamAblak {
+    background:linear-gradient(black,grey);
+    width: 200px;
+    height: 60vw;
+    margin: 0 30px;
 }

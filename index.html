@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adivina el numero</title>
+    <title>Adivina el número</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="script.js" defer></script>
+    <script src="adivinaNumero.js" defer></script>
 </head>
-<body>
-    <h1>Adivina el numero</h1>
-    <p>Hemos selecciando un numero entre el 1 y el 100</p>
-    <p>Intenta adivinarlo en 100 intentos o menos</p>
-    <p>Se ayudara indicando so el numero es mayor o menor al escrito</p>
-    <div class="form">
-        <label for="guessField">Entra el numero</label>
-        <input type="number" min="1" max="100" required id="guessField" class="guessField">
-        <input type="submit" placeholder="Enviar numero" class="guessSubmit">
-    </div>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-    </div>
-</body>
+
+  <body>
+    <header>
+      <div class="fejlec">
+        <p>
+          GameGarden
+        </p>
+      </div>
+    </header>
+    <section>
+      <div class="reklamAblak"></div>
+      <div class="jatekAblak">
+        <h1>Guess the number!</h1>
+        <p>The computer has generated a number between 1 and 100</p>
+        <p>You are given 10 chances to try and guess the number</p>
+        <p>With each unsuccesful attempt you'll be told if the number you guessed is too big or too small</p>
+  
+        <div class="form">
+        <label for="guessField">Enter a number</label>
+        <input type="number" name="quantity" id="guessField" class="guessField" placeholder="1-100" min="1" max="100">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+        </div>
+  
+        <div class="resultParas">
+          <p class="guesses"></p>
+          <p class="lastResult"></p>
+          <p class="lowOrHi"></p>
+        </div>
+        <button class="resetButton">Reset game</button>
+      </div>
+      <div class="reklamAblak"></div>
+    </section>
+  </body>
+    
 </html>
