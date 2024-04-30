@@ -6,9 +6,12 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
   const guessSubmit = document.querySelector('.guessSubmit');
   const guessField = document.querySelector('.guessField');
   const resetButton = document.querySelector('.resetButton');
+  const reactKep = document.querySelector('#reactKep');
+  const gameGarden = document.querySelector('#gameGarden');
 
   let guessCount = 1;
   resetButton.style.visibility = 'hidden';
+  reactKep.style.visibility = 'hidden';
 
   function checkGuess() {
 
@@ -22,9 +25,15 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
       lastResult.textContent = 'Congratulations! You guessed the number!';
       lastResult.style.backgroundColor = 'green';
       lowOrHi.textContent = '';
+      reactKep.style.visibility = 'visible';
+      reactKep.src= "https://www.nicepng.com/png/full/32-324680_like-emoji-smiley-face-thumbs-up.png";
+      reactKep.scrollIntoView(true);
       setGameOver();
     } else if(guessCount === 10) {
       lastResult.textContent = 'Game over!';
+      reactKep.style.visibility = 'visible';
+      reactKep.src= "https://www.pngmart.com/files/12/Dislike-Emoji-PNG-Clipart.png";
+      reactKep.scrollIntoView(true);
       setGameOver();
     } else {
       lastResult.textContent = 'Incorrect';
@@ -42,30 +51,31 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
   }
   guessSubmit.addEventListener('click', checkGuess);
   function setGameOver() {
-	  guessField.disabled = true;
-	  guessSubmit.disabled = true;
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
     resetButton.style.visibility = 'visible';
-	  //resetButton = document.createElement('button');
-
-	  resetButton.addEventListener('click', resetGame);
-  }
+    resetButton.addEventListener('click', resetGame);
+}
 
   function resetGame() {
+    reactKep.style.visibility = 'hidden';
 	  guessCount = 1;
-    resetButton.style.visibility = 'visible';
+    resetButton.style.visibility = 'hidden';
     const resetParas = document.querySelectorAll('.resultParas p');
     for (const resetPara of resetParas) {
       resetPara.textContent = '';
     }
-	  resetButton.parentNode.removeChild(resetButton);
-
+    
 	  guessField.disabled = false;
 	  guessSubmit.disabled = false;
 	  guessField.value = '';
 	  guessField.focus();
-
+    
 	  lastResult.style.backgroundColor = 'white';
-
+    
 	  randomNumber = Math.floor(Math.random() * 100) + 1;
     console.log(randomNumber)
+    gameGarden.scrollIntoView(true);
   }
+  /*"https://www.pngmart.com/files/12/Dislike-Emoji-PNG-Clipart.png"
+   */
