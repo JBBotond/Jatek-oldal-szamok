@@ -20,7 +20,7 @@ section {
 }
 body header .fejlec  {
     display: flex;
-    background: rgb(85, 227, 85);
+    background: #519973;
     height: 120px;
     width: 100%vw;
     margin-bottom: 30px;
@@ -42,7 +42,7 @@ body header .fejlec  {
     font-size: xx-large;
     
     font-style: italic;
-    background: -webkit-linear-gradient(#2ee725, #78d173);
+    background: -webkit-linear-gradient(#519973, #78d173);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 2px dotted;
@@ -65,4 +65,7 @@ section .reklamAblak {
 .kepKeret img {
     width: 512px;
     height: 512px;
+}
+.fejlec img {
+    height: inherit;
 }
